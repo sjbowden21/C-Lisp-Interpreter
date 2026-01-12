@@ -1,13 +1,14 @@
 # C-Lisp-Interpreter
 Implements a command line intepreter for a Lisp dialect. Written in C, 2289 LOC. Executes a read, evaluate, print (REPL) loop when run by the user. Implementation covers a significant portion of its Lisp dialect but is partial (does not include closures for example). The following are implemented:
 
-- data structure (tagged enum used) to house the data types
+- data structure to house the data types (tagged enum used)
 - number, symbol, boolean, string, list, and error data types
-- startup environment of bindings (function symbols to functions)
+- startup environment of bindings (maps symbols to functions)
 - +, -, *, /, =, quit, <, <=, >, >=, !=, and 
 not functions
 - def, _,  if, cons, head, tail, quote, ord, chr, input, output and type special forms
 - freeing of dynamically declared variables, including freeing of environments, sublists when no longer assessible or used, underscore binding when replaced (_ is set to the last sucessful return), parsed list from user input stream, evaluated list/value, return value, etc.
+- recursive evaluation to arbitrary depth (i.e. to arbitrary number of nested parenthesis)
 
 # Example Usage
 
